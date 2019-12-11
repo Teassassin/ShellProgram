@@ -26,8 +26,8 @@ done
 #创建txt保存/bin中包含ls的文件
 touch ls_files.txt
 ls_files=`find /bin/ *ls*`
-#文件置空重新写入
-echo "" > ls_files.txt
+#文件置空重新写入，echo不换行
+echo -e "\c" > ls_files.txt
 for i in ${ls_files}
 do
     #从第6个开始截取，为删掉/bin/开头
